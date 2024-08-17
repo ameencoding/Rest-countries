@@ -1,0 +1,83 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --Dark-Blue: hsl(209, 23%, 22%); /*  (Dark Mode Elements) */
+  --Very-Dark-Blue-bg: hsl(207, 26%, 17%); /*  (Dark Mode Background) */
+  --Very-Dark-Blue: hsl(200, 15%, 8%); /* (Light Mode Text) */
+  --Dark-Gray: hsl(0, 0%, 52%); /* (Light Mode Input) */
+  --Very-Light-Gray: hsl(0, 0%, 98%); /* (Light Mode Background) */
+  --White: hsl(0, 0%, 100%); /* (Dark Mode Text & Light Mode Elements) */
+
+  --x-space: 4.5rem;
+  --box-shadow: 12px 1px 10px rgba(0, 0, 0, 0.1);
+}
+
+body {
+  font-family: "Nunito Sans", sans-serif;
+  background-color: var(--Very-Light-Gray);
+}
+
+header {
+  padding: 1rem var(--x-space);
+  box-shadow: var(--box-shadow);
+}
+
+header strong {
+  color: var(--Very-Dark-Blue);
+}
+
+header .mode {
+  padding: 2px 6px;
+  border-radius: 3px;
+  border: 0.5px solid var(--Dark-Gray);
+}
+
+.search-container {
+  margin: 1rem var(--x-space);
+}
+
+.search-container input {
+  padding: 6px 12px;
+
+  border: 0.5px solid var(--Dark-Gray);
+  border-radius: 4px;
+  outline: none;
+}
+
+/* warapper */
+.wrapper {
+  margin: 1rem var(--x-space);
+  background-color: saddlebrown;
+  height: 450px;
+}
+
+/* ######### Utilities ######### */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tx-md {
+  font-size: 0.9rem;
+}
+
+.tx-sm {
+  font-size: 0.75rem;
+}
+
+.tx-xs {
+  font-size: 0.6rem;
+}
