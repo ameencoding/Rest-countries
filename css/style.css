@@ -11,11 +11,11 @@
   --Very-Dark-Blue-bg: hsl(207, 26%, 17%); /*  (Dark Mode Background) */
   --Very-Dark-Blue: hsl(200, 15%, 8%); /* (Light Mode Text) */
   --Dark-Gray: hsl(0, 0%, 52%); /* (Light Mode Input) */
-  --Very-Light-Gray: hsl(0, 0%, 98%); /* (Light Mode Background) */
+  --Very-Light-Gray: hsl(0, 0%, 92%); /* (Light Mode Background) */
   --White: hsl(0, 0%, 100%); /* (Dark Mode Text & Light Mode Elements) */
 
-  --x-space: 4.5rem;
-  --box-shadow: 12px 1px 10px rgba(0, 0, 0, 0.1);
+  --x-space: 6rem;
+  --box-shadow: 12px 1px 14px rgba(0, 0, 0, 0.1);
 }
 
 body {
@@ -24,7 +24,7 @@ body {
 }
 
 header {
-  padding: 1rem var(--x-space);
+  padding: 1.2rem var(--x-space);
   box-shadow: var(--box-shadow);
 }
 
@@ -33,41 +33,107 @@ header strong {
 }
 
 header .mode {
-  padding: 2px 6px;
-  border-radius: 3px;
-  border: 0.5px solid var(--Dark-Gray);
+  transition: 0.3s all ease-in-out;
+  cursor: pointer;
 }
 
 .search-container {
-  margin: 1rem var(--x-space);
+  margin: 2rem var(--x-space);
 }
 
 .search-container input {
-  padding: 6px 12px;
+  width: 30%;
+  box-shadow: var(--box-shadow);
 
-  border: 0.5px solid var(--Dark-Gray);
+  padding: 14px 16px;
+  background-color: var(--White);
+  border: 0;
   border-radius: 4px;
   outline: none;
+}
+
+.filter {
+  transition: 0.3s all ease-in-out;
+  border-radius: 4px;
+  background-color: var(--White);
+  padding: 10px 16px;
+  cursor: pointer;
 }
 
 /* warapper */
 .wrapper {
   margin: 1rem var(--x-space);
-  background-color: saddlebrown;
-  height: 450px;
+  height: 600px;
+  padding: 0 1rem;
+
+  overflow-y: auto;
+}
+
+/* card */
+.card {
+  height: fit-content;
+  border-radius: 6px;
+  background-color: var(--White);
+}
+
+.wrapper .card:not(:nth-child(1), :nth-child(2), :nth-child(3), :nth-child(4)) {
+  margin-top: 0.8rem;
+}
+
+.card .cover img {
+  border-radius: 6px 6px 0 0;
+  width: 100%;
+
+  display: block;
+}
+
+.card .info {
+  padding: 1.5rem 1.2rem 1.8rem;
+}
+
+.card .name {
+  font-weight: 600;
+  font-size: 1.3rem;
+}
+
+.card .population {
+  margin-top: 0.5rem;
+}
+
+.card .info > p:not(p.population) {
+  margin-top: 0.4rem;
+}
+
+.card .info > p {
+  margin-top: 1rem;
+  color: var(--Very-Dark-Blue);
+}
+
+.card .info > p span {
+  color: var(--Dark-Gray);
 }
 
 /* ######### Utilities ######### */
 .grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 1rem;
+  gap: 2.5rem;
 }
 
 .flex {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.bordered {
+  padding: 2px 6px;
+  border-radius: 3px;
+  border: 0.5px solid var(--Dark-Gray);
+}
+
+.hover:hover {
+  scale: 0.97;
 }
 
 .tx-md {
