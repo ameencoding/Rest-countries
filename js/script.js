@@ -10,6 +10,8 @@ const regions = regionsContainer.querySelectorAll("ul li");
 
 const input = document.querySelector(".search-container input");
 
+let cards;
+
 const renderCountry = function (data) {
   container.innerHTML = data
     .map((d) => {
@@ -63,7 +65,26 @@ regions.forEach((region) => {
 
     const byRegion = countries.filter((c) => c.region === val);
     renderCountry(byRegion);
+    handleCardClick();
   });
 });
 
+const handleCardClick = function () {
+  let country;
+  cards = container.querySelectorAll(".card");
+  cards.forEach((card) => {
+    card.addEventListener("click", function () {
+      const name = this.querySelector(".info .name").textContent;
+      country = countries
+        .filter((c) => c.name === name)
+        .map((c) => c.name)
+        .join();
+      window.location.href = `country.html?country=${encodeURIComponent(
+        country
+      )}`;
+    });
+  });
+};
+
 renderCountry(countries);
+handleCardClick();

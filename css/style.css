@@ -151,6 +151,28 @@ div.regions {
   color: var(--Dark-Gray);
 }
 
+/* Country Page */
+.btn-back {
+  width: 90px;
+  padding: 10px 16px;
+  background-color: var(--White);
+  border: 0;
+  border-radius: 4px;
+  transition: 0.2s all ease-in-out;
+
+  gap: 0.5rem;
+  cursor: pointer;
+}
+
+.btn-back svg {
+  height: 16px;
+}
+
+.btn-back a {
+  text-decoration: none;
+  color: var(--Very-Dark-Blue);
+}
+
 /* ######### Utilities ######### */
 .grid {
   display: grid;
