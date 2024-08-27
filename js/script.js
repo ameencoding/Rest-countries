@@ -44,6 +44,7 @@ input.addEventListener("input", function () {
 
   if (searched.length > 0) {
     renderCountry(searched);
+    handleCardClick();
   } else {
     console.log("OOOPS");
   }
