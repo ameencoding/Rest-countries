@@ -10,7 +10,6 @@ const getCountry = function (name) {
 };
 
 const countryName = getCountry("country");
-
 const country = countries.filter((c) => c.name === countryName);
 
 // redirect
@@ -32,7 +31,9 @@ container.innerHTML = country
               <li>Population: <span>${c.population}</span></li>
               <li>Region: <span>${c.region}</span></li>
               <li>Sub Region: <span>${c.subregion}</span></li>
-              <li>Capital: <span>${c.capital}</span></li>
+              <li>Capital: <span>${
+                c.capital ? c.capital : "No Capital"
+              }</span></li>
             </ul>
           </div>
           <div>
@@ -47,11 +48,15 @@ container.innerHTML = country
         </div>
         <div class="neighbour default-flex tx-sm">
           <strong>Border Countries:</strong>
-           ${c.borders
-             .map((b) => {
-               return `<p class="tx-sm">${b}</p>`;
-             })
-             .join(" ")}
+           ${
+             c.borders
+               ? c.borders
+                   .map((b) => {
+                     return `<p class="tx-sm">${b}</p>`;
+                   })
+                   .join(" ")
+               : `<p class="tx-sm">No Borders</p>`
+           }
         </div>
       </div>
       `;

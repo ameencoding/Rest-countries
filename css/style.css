@@ -7,12 +7,12 @@
 }
 
 :root {
-  --Dark-Blue: hsl(209, 23%, 22%); /*  (Dark Mode Elements) */
-  --Very-Dark-Blue-bg: hsl(207, 26%, 17%); /*  (Dark Mode Background) */
-  --Very-Dark-Blue: hsl(200, 15%, 8%); /* (Light Mode Text) */
-  --Dark-Gray: hsl(0, 0%, 52%); /* (Light Mode Input) */
-  --Very-Light-Gray: hsl(0, 0%, 92%); /* (Light Mode Background) */
-  --White: hsl(0, 0%, 100%); /* (Dark Mode Text & Light Mode Elements) */
+  --Dark-Blue: hsl(209, 23%, 22%);
+  --Very-Dark-Blue-bg: hsl(207, 26%, 17%);
+  --Very-Dark-Blue: hsl(200, 15%, 8%);
+  --Dark-Gray: hsl(0, 0%, 52%);
+  --Very-Light-Gray: hsl(0, 0%, 92%);
+  --White: hsl(0, 0%, 100%);
 
   --x-space: 6rem;
   --x-space-media: 2.5rem;

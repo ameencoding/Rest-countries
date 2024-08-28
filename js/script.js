@@ -7,7 +7,6 @@ const btnFilter = document.querySelector(".filter span");
 const chevron = document.querySelector(".filter svg");
 const regionsContainer = document.querySelector(".regions");
 const regions = regionsContainer.querySelectorAll("ul li");
-
 const input = document.querySelector(".search-container input");
 
 let cards;
@@ -28,7 +27,9 @@ const renderCountry = function (data) {
                 Region: <span class="tx-sm">${d.region}</span>
               </p>
               <p class="capital tx-md">
-                Capital: <span class="tx-sm">${d.capital}</span>
+                Capital: <span class="tx-sm">${
+                  d.capital ? d.capital : "No Capital"
+                }</span>
               </p>
             </div>
           </div>`;
